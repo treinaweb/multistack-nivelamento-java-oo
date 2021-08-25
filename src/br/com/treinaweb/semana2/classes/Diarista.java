@@ -1,21 +1,16 @@
 package br.com.treinaweb.semana2.classes;
 
-public class Diarista {
+public class Diarista extends Pessoa {
 
-    public String nome;
-
-    public String telefone;
-
-    public String endereco;
+    public String chavePix;
 
     public Diarista(String nome) {
-        this.nome = nome;
+        super(nome, null, null);
     }
 
-    public Diarista(String nome, String telefone, String endereco) {
-        this.nome = nome;
-        this.telefone = telefone;
-        this.endereco = endereco;
+    public Diarista(String nome, String telefone, String endereco, String chavePix) {
+        super(nome, telefone, endereco);
+        this.chavePix = chavePix;
     }
 
     public void atender(String nomeCliente) {
