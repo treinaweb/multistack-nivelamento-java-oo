@@ -2,19 +2,22 @@ package br.com.treinaweb.semana2.classes;
 
 public class Cliente extends Pessoa {
 
-    private double saldo;
-
-    public Cliente(String nome, String telefone, String endereco, double saldo) {
+    public Cliente(String nome, String telefone, String endereco) {
         super(nome, telefone, endereco);
-        this.saldo = saldo;
     }
 
-    public double getSaldo() {
-        return saldo;
+    @Override
+    public void depositar(double valor) {
+        var saldoAtual = this.getSaldo();
+        var novoSaldo = saldoAtual + valor + (valor * 0.1);
+        this.setSaldo(novoSaldo);
     }
 
-    public void setSaldo(double saldo) {
-        this.saldo = saldo;
+    @Override
+    public void sacar(double valor) {
+        var saldoAtual = this.getSaldo();
+        var novoSaldo = saldoAtual - valor;
+        this.setSaldo(novoSaldo);
     }
 
 }

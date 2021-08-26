@@ -12,12 +12,21 @@ public class App {
         System.out.println("Telefone: " + diarista.getTelefone());
         System.out.println("Endereço: " + diarista.getEndereco());
         System.out.println("Chave Pix: " + diarista.getChavePix());
+        System.out.println("Saldo: " + diarista.getSaldo());
+        diarista.depositar(100);
+        System.out.println("Saldo: " + diarista.getSaldo());
+        diarista.sacar(50);
+        System.out.println("Saldo: " + diarista.getSaldo());
         diarista.atender("Cleyson");
 
-        var cliente = new Cliente("Maria da Silva", "(11) 99877-7777", "Av Paulista, 1221", 1000.0);
+        var cliente = new Cliente("Maria da Silva", "(11) 99877-7777", "Av Paulista, 1221");
         System.out.println("Nome: " + cliente.getNome());
         System.out.println("Telefone: " + cliente.getTelefone());
         System.out.println("Endereço: " + cliente.getEndereco());
+        System.out.println("Saldo: " + cliente.getSaldo());
+        cliente.depositar(100);
+        System.out.println("Saldo: " + cliente.getSaldo());
+        cliente.sacar(50);
         System.out.println("Saldo: " + cliente.getSaldo());
 
         var atendimento = new Atendimento();

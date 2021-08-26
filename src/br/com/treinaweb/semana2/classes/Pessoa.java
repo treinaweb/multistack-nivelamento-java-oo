@@ -1,6 +1,8 @@
 package br.com.treinaweb.semana2.classes;
 
-public abstract class Pessoa {
+import br.com.treinaweb.semana2.interfaces.ISaldo;
+
+public abstract class Pessoa implements ISaldo {
 
     private String nome;
 
@@ -8,10 +10,13 @@ public abstract class Pessoa {
 
     private String endereco;
 
+    private double saldo;
+
     public Pessoa(String nome, String telefone, String endereco) {
         this.nome = nome;
         this.telefone = telefone;
         this.endereco = endereco;
+        this.saldo = 0.0;
     }
 
     public String getNome() {
@@ -36,6 +41,14 @@ public abstract class Pessoa {
 
     public void setEndereco(String endereco) {
         this.endereco = endereco;
+    }
+
+    public double getSaldo() {
+      return saldo;
+    }
+
+    protected void setSaldo(double saldo) {
+      this.saldo = saldo;
     }
 
 }

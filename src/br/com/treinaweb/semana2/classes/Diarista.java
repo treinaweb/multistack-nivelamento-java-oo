@@ -25,4 +25,18 @@ public class Diarista extends Pessoa {
         this.chavePix = chavePix;
     }
 
+    @Override
+    public void sacar(double valor) {
+        var saldoAtual = this.getSaldo();
+        var novoSaldo = saldoAtual - valor;
+        this.setSaldo(novoSaldo);
+    }
+
+    @Override
+    public void depositar(double valor) {
+        var saldoAtual = this.getSaldo();
+        var novoSaldo = saldoAtual + valor;
+        this.setSaldo(novoSaldo);
+    }
+
 }
