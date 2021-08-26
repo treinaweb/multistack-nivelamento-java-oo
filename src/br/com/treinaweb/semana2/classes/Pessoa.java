@@ -1,6 +1,6 @@
 package br.com.treinaweb.semana2.classes;
 
-public class Pessoa {
+public abstract class Pessoa {
 
     private String nome;
 
