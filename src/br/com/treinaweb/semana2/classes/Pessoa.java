@@ -47,6 +47,11 @@ public abstract class Pessoa implements ISaldo {
       return saldo;
     }
 
+    public void transferir(ISaldo obj, double valor) {
+        this.sacar(valor);
+        obj.depositar(valor);
+    }
+
     protected void setSaldo(double saldo) {
       this.saldo = saldo;
     }

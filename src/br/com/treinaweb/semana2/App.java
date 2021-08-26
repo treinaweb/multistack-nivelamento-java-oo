@@ -32,5 +32,19 @@ public class App {
         var atendimento = new Atendimento();
         atendimento.setHoras(6);
         System.out.println(atendimento.getHoras());
+
+        var cliente2 = new Cliente("Nome Teste", "2767326", "ABC");
+        var diarista2 = new Diarista("Nome Teste", "273672", "DEF", "123");
+
+        cliente2.depositar(100);
+        cliente2.transferir(diarista2, 50);
+
+        System.out.println(cliente2.getSaldo());
+        System.out.println(diarista2.getSaldo());
+
+        diarista2.transferir(cliente2, 20);
+
+        System.out.println(cliente2.getSaldo());
+        System.out.println(diarista2.getSaldo());
     }
 }
