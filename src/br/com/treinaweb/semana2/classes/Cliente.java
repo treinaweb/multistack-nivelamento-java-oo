@@ -20,4 +20,9 @@ public class Cliente extends Pessoa {
         this.setSaldo(novoSaldo);
     }
 
+    @Override
+    public String toString() {
+        return "Cliente: " + this.getNome();
+    }
+
 }

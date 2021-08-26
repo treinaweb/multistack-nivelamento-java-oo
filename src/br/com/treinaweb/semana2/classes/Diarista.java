@@ -39,4 +39,34 @@ public class Diarista extends Pessoa {
         this.setSaldo(novoSaldo);
     }
 
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = super.hashCode();
+        result = prime * result + ((chavePix == null) ? 0 : chavePix.hashCode());
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (!super.equals(obj))
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Diarista other = (Diarista) obj;
+        if (chavePix == null) {
+            if (other.chavePix != null)
+                return false;
+        } else if (!chavePix.equals(other.chavePix))
+            return false;
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "Diarista: " + this.getNome();
+    }
+
 }

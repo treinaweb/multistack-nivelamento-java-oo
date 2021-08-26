@@ -46,5 +46,13 @@ public class App {
 
         System.out.println(cliente2.getSaldo());
         System.out.println(diarista2.getSaldo());
+
+        System.out.println(cliente);
+        System.out.println(diarista);
+
+        var diarista3 = new Diarista("Nome Teste", "123", "ABC", "123");
+        var diarista4 = new Diarista("Nome Teste", "123", "ABC", "123");
+
+        System.out.println(diarista3.equals(diarista4));
     }
 }
