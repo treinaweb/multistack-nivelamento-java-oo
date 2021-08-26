@@ -2,7 +2,7 @@ package br.com.treinaweb.semana2.classes;
 
 public class Diarista extends Pessoa {
 
-    public String chavePix;
+    private String chavePix;
 
     public Diarista(String nome) {
         super(nome, null, null);
@@ -15,6 +15,14 @@ public class Diarista extends Pessoa {
 
     public void atender(String nomeCliente) {
         System.out.println("Realizando atendimento para cliente " + nomeCliente);
+    }
+
+    public String getChavePix() {
+        return chavePix;
+    }
+
+    public void setChavePix(String chavePix) {
+        this.chavePix = chavePix;
     }
 
 }
