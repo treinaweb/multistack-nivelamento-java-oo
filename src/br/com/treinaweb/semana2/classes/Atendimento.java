@@ -2,7 +2,13 @@ package br.com.treinaweb.semana2.classes;
 
 public class Atendimento {
 
+    private String data;
+
     private int horas;
+
+    private Cliente cliente;
+
+    private Diarista diarista;
 
     public void setHoras(int horas) {
         if (horas < 1 || horas > 12) {
@@ -14,6 +20,30 @@ public class Atendimento {
 
     public int getHoras() {
         return horas;
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public Diarista getDiarista() {
+        return diarista;
+    }
+
+    public void setDiarista(Diarista diarista) {
+        this.diarista = diarista;
     }
 
 }
